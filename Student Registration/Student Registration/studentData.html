@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="attendence.css">
+    <link rel="stylesheet" href="student.css">
+</head>
+<body>
+<div>
+    <div class="bg">
+        <h1 class="heads">DR. KV SUBBA REDDY <br><span class="break">INSTITUTE OF TECHNOLOGY</span> </h1>
+    </div>
+    <div class="d-flex flex-row">
+        <div><!--half side-->
+    <h1 class="studenthead" id="username"></h1>
+
+    <div class="years d-flex flex-row align-items-center p">
+        <div><button class="year1 button button1 " onclick="display(sectionsemesters1)">1st YEAR</button></div>
+        <div><button class="year2 button button1">2nd YEAR</button></div>
+        <div> <button class="year3 button button1">3rd YEAR</button></div>
+        <div><button class="year4 button button1">4th YEAR</button></div>
+    </div><!--datacard-->
+    <div class="years d-flex flex-row justify-content-center" id="sectionsem1results">
+        <button class="sem1 btn btn-primary " onclick="display(sectionsem1results)">SEMESTER-I</button>
+        <button class="sem2 btn btn-primary ">SEMESTER-II</button>
+    </div>
+<div class="d-flex flex-row align-items-center" id="sectionsem1results">
+    <div>
+    <div class="datacard">
+    <div class="circular-progress">
+        <p class="attend fw-bolder">ATTENDENCE:<span id="attendance"></span></p>
+    </div>
+     <!--tables start-->
+     <div class="container"></div>
+     <p class="internal fw-bolder">INTERNALS :</p>
+     <div class="scroll-container">
+         <table>
+             <thead>
+                 <tr>
+                     <th>Subject</th>
+                     <th>Marks</th>
+                     <th>Status</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr>
+                     <td id="subject1"></td>
+                     <td id="Marks1"></td>
+                     <td id="status"></td>
+                 </tr>
+                 <tr>
+                     <td id="subject2"></td>
+                     <td id="Marks2"></td>
+                     <td id="status"></td>
+                 </tr>
+                 <tr>
+                     <td id="subject3"></td>
+                     <td id="Marks3"></td>
+                     <td id="status"></td>
+                 </tr>
+                 <tr>
+                     <td id="subject4"></td>
+                     <td id="Marks4"></td>
+                     <td id="status"></td>
+                 </tr>
+             </tbody>
+         </table>
+     </div>
+     <p class="external fw-bolder">EXTERNALS :</p>
+     <div class="scroll-container">
+         <table>
+             <!-- You can add the externals data here -->
+         </table>
+     </div>
+ </div>
+ <!--tables end-->
+ </div>
+ </div>
+ </div>
+ <!--datacard-->
+ <div><!--OTHER HALF-->
+ <div class="Card">
+    <div class="id-card">
+    </div>
+    <!--imga nd info-->
+    <div class="top-image d-flex flex-row">
+        <p class="cousre1" id="course">khand<br>
+        <span class="reg" id="number">khan</span></p>
+        <div class="photo">
+            <img src="" alt="Student Photo" id="user-photo">
+        </div>
+    </div>
+    <hr width="80%" class="line">
+        <div class="details">
+            <p class="info"><strong>Contact:</strong> <span id="contact"></span></p>
+            <p class="info"><strong>Residency:</strong> <span id="residency"></span></p>
+            <p class="info"><strong>Address:</strong> <span id="address"></span></p>
+            <p class="info"><strong>Fee Due:</strong> <span id="fee-due"></span></p>
+        </div>
+    </div>
+</div><!--end of half-->    
+    <script src="script.js"></script>
+ </div>
+</div>
+</div>
+
+    <div id="studentData"></div>
+    <script src="studentData.js"></script>
+</body>
+</html>
